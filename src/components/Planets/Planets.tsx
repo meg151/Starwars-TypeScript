@@ -7,7 +7,7 @@ const fetchPlanets = (page = 0) =>
 
 const Planets = () => {
   const [page, setPage] = useState(1);
-  const { isLoading, isError, error, data, isFetching, isPreviousData } =
+  const { isLoading, isError, error, data, isFetching, isPreviousData }:any=
     useQuery(['planets', page], () => fetchPlanets(page), {
       keepPreviousData: true,
     });
